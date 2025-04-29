@@ -1,10 +1,19 @@
-## Pasos
+# Pasos para levantar Kafka y probar Producer/Consumer
 
-1. Tener levantado zookeeper
+## 1. Levantar Zookeeper
 
-  .\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
-  
-2. Levantar kafka
-   .\bin\windows\kafka-server-start.bat .\config\server.properties
+```bash
+.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
+```
 
-3. Con eso se debe tener un topico donde el producer envie el mensaje y el consumer lo escuche, nuestro topico es devs4j-topic
+## 2. Levantar Kafka
+
+```
+.\bin\windows\kafka-server-start.bat .\config\server.properties
+```
+
+## 3. Comunicación entre Producer y Consumer
+
+- El Producer enviará mensajes al tópico devs4j-topic.
+
+- El Consumer escuchará mensajes desde el mismo tópico devs4j-topic.
